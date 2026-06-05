@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 const siteUrl = "https://runvelocityai.com"; // Update to your domain when deployed
 
 export const metadata: Metadata = {
-  title: "VelocityAI | Empowering Modern Businesses to Lead with AI",
-  description: "Empowering Modern Businesses to Lead with AI. Professional AI-powered websites and intelligent automation for Sacramento businesses. Custom sites, chatbots, workflows, and AI integrations that deliver measurable results.",
+  title: "VelocityAI | Ai Solutions for Modern Businesses to Grow",
+  description: "Ai Solutions for Modern Businesses to Grow. Professional AI-powered websites and intelligent automation for Sacramento businesses. Custom sites, chatbots, workflows, and AI integrations that deliver measurable results.",
   keywords: [
     "AI services Sacramento",
     "AI website development Sacramento",
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
   creator: "VelocityAI",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "VelocityAI | Empowering Modern Businesses to Lead with AI",
-    description: "Empowering Modern Businesses to Lead with AI. We build fast, modern websites and intelligent automations that help Sacramento businesses save time and grow. Local expertise, real ROI.",
+    title: "VelocityAI | Ai Solutions for Modern Businesses to Grow",
+    description: "Ai Solutions for Modern Businesses to Grow. We build fast, modern websites and intelligent automations that help Sacramento businesses save time and grow. Local expertise, real ROI.",
     images: [
       {
         url: "/images/hero.jpg",
         width: 1200,
         height: 630,
-        alt: "VelocityAI - Empowering Modern Businesses to Lead with AI",
+        alt: "VelocityAI - Ai Solutions for Modern Businesses to Grow",
       },
     ],
     locale: "en_US",
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VelocityAI | Empowering Modern Businesses to Lead with AI",
-    description: "Empowering Modern Businesses to Lead with AI. Professional AI-powered websites and intelligent automation for Sacramento businesses.",
+    title: "VelocityAI | Ai Solutions for Modern Businesses to Grow",
+    description: "Ai Solutions for Modern Businesses to Grow. Professional AI-powered websites and intelligent automation for Sacramento businesses.",
     images: ["/images/hero.jpg"],
   },
   icons: {
@@ -66,7 +66,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "VelocityAI",
-  description: "Empowering Modern Businesses to Lead with AI. AI-powered website development and intelligent automation services for businesses in Sacramento, California.",
+  description: "Ai Solutions for Modern Businesses to Grow. AI-powered website development and intelligent automation services for businesses in Sacramento, California.",
   url: siteUrl,
   telephone: "(916) 555-0192",
   email: "hello@runvelocityai.com",

@@ -1,6 +1,6 @@
 # VelocityAI — Sacramento
 
-Modern one-page professional website for **VelocityAI** — Empowering Modern Businesses to Lead with AI. An AI services company based in Sacramento, California.
+Modern one-page professional website for **VelocityAI** — Ai Solutions for Modern Businesses to Grow. An AI services company based in Sacramento, California.
 
 **Live site:** https://runvelocityai.com
 **Contact:** hello@runvelocityai.com | (916) 555-0192

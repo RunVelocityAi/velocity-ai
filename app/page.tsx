@@ -114,11 +114,11 @@ export default function VelocityAI() {
             </div>
 
             <h1 className="text-6xl md:text-7xl font-semibold tracking-[-3.2px] leading-[0.96] mb-6">
-              Empowering Modern Businesses<br />to Lead with AI.
+              Ai Solutions for Modern Businesses<br />to Grow
             </h1>
             
             <p className="max-w-xl text-xl md:text-2xl text-slate-300 tracking-tight mb-10">
-              Empowering modern businesses with practical AI websites and intelligent automation that save time and drive measurable growth.
+              We harness AI to build fast, beautiful websites and practical automation that help your business grow like never before.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -152,7 +152,7 @@ export default function VelocityAI() {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10">
             <Image
               src="/images/hero.jpg"
-              alt="VelocityAI — Empowering Modern Businesses to Lead with AI"
+              alt="VelocityAI — Ai Solutions for Modern Businesses to Grow"
               width={1600}
               height={900}
               className="w-full h-auto object-cover"
@@ -274,7 +274,7 @@ export default function VelocityAI() {
         <div className="grid md:grid-cols-12 gap-x-10 gap-y-10 items-center">
           <div className="md:col-span-7">
             <div className="uppercase text-xs font-semibold tracking-[2px] text-[#4f46e5]">WHO WE ARE</div>
-            <h2 className="mt-3 text-5xl tracking-[-2.6px] font-semibold leading-none">A Passionate Team that's focussed on outcomes,<br />driven by velocity.</h2>
+            <h2 className="mt-3 text-5xl tracking-[-2.6px] font-semibold leading-none">Focussed on Outcomes.<br />Driven by Velocity</h2>
             
             <div className="prose prose-slate mt-7 max-w-2xl text-[15.5px] text-slate-600">
               <p>We’re based in Sacramento because we believe modern businesses deserve world-class technology without the hype or the San Francisco markup.</p>

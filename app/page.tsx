@@ -103,24 +103,22 @@ export default function VelocityAI() {
     <div id="top" className="min-h-screen">
       <Navbar />
 
-      {/* HERO */}
+            {/* HERO */}
       <section className="relative pt-12 pb-20 md:pt-16 md:pb-28 bg-slate-950 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#334155_0.8px,transparent_1px)] bg-[length:5px_5px] opacity-40" />
-        
+       
         <div className="relative max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-medium mb-6">
               <MapPin className="w-4 h-4" /> Sacramento, California
             </div>
-
             <h1 className="text-6xl md:text-7xl font-semibold tracking-[-3.2px] leading-[0.96] mb-6">
-              Ai Solutions for Modern Businesses<br />to Grow
+              AI That Accelerates<br />Modern Business
             </h1>
-            
+           
             <p className="max-w-xl text-xl md:text-2xl text-slate-300 tracking-tight mb-10">
-              We harness AI to build fast, beautiful websites and practical automation that help your business grow like never before.
+              Practical AI websites, automation, and strategy that deliver real results — fast.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" })}
@@ -135,7 +133,6 @@ export default function VelocityAI() {
                 See Our Work
               </button>
             </div>
-
             <div className="mt-10 flex items-center gap-8 text-sm text-slate-400">
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-[#14b8a6]" /> Local team
@@ -152,7 +149,7 @@ export default function VelocityAI() {
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10">
             <Image
               src="/images/hero.jpg"
-              alt="VelocityAI — Ai Solutions for Modern Businesses to Grow"
+              alt="VelocityAI — AI That Accelerates Modern Business"
               width={1600}
               height={900}
               className="w-full h-auto object-cover"
@@ -162,7 +159,6 @@ export default function VelocityAI() {
           </div>
         </div>
       </section>
-
       {/* TRUST / STATS BAR */}
       <div className="border-b border-slate-200 bg-white py-5">
         <div className="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-sm">
@@ -273,8 +269,9 @@ export default function VelocityAI() {
       <section id="about" className="max-w-5xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-12 gap-x-10 gap-y-10 items-center">
           <div className="md:col-span-7">
-            <div className="uppercase text-xs font-semibold tracking-[2px] text-[#4f46e5]">WHO WE ARE</div>
-            <h2 className="mt-3 text-5xl tracking-[-2.6px] font-semibold leading-none">Focussed on Outcomes.<br />Driven by Velocity</h2>
+            <div className="uppercase text-xs font-semibold tracking-[2px] text-[#4f46e5]">WHO WE ARE</div>            
+            <h2 className="mt-3 text-5xl tracking-[-2.6px] font-semibold leading-none">AI Builders Obsessed with Results.<br />Driven by Velocity</h2>
+                      
             
             <div className="prose prose-slate mt-7 max-w-2xl text-[15.5px] text-slate-600">
               <p>We’re based in Sacramento because we believe modern businesses deserve world-class technology without the hype or the San Francisco markup.</p>

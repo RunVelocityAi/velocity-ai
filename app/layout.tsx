@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
   weight: ["400", "500", "600"],
 });
 
-const siteUrl = "https://runvelocityai.com"; // Update to your domain when deployed
+const siteUrl = "https://velocity-ai-seven.vercel.app"; // Update this when you get a custom domain
 
 export const metadata: Metadata = {
-  title: "VelocityAI | Ai Solutions for Modern Businesses to Grow",
-  description: "Ai Solutions for Modern Businesses to Grow. Professional AI-powered websites and intelligent automation for Sacramento businesses. Custom sites, chatbots, workflows, and AI integrations that deliver measurable results.",
+  title: "Velocity AI | AI That Accelerates Modern Business",
+  description: "Practical AI solutions that deliver real results. We build high-performing websites, intelligent automation, and AI strategies for modern businesses in Sacramento and beyond.",
   keywords: [
     "AI services Sacramento",
     "AI website development Sacramento",
@@ -29,19 +29,20 @@ export const metadata: Metadata = {
     "intelligent automation",
     "Next.js websites",
     "AI chatbots for business",
+    "AI strategy",
   ],
   authors: [{ name: "VelocityAI" }],
   creator: "VelocityAI",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "VelocityAI | Ai Solutions for Modern Businesses to Grow",
-    description: "Ai Solutions for Modern Businesses to Grow. We build fast, modern websites and intelligent automations that help Sacramento businesses save time and grow. Local expertise, real ROI.",
+    title: "Velocity AI | AI That Accelerates Modern Business",
+    description: "Practical AI websites, automation, and strategy that deliver real results — fast.",
     images: [
       {
         url: "/images/hero.jpg",
         width: 1200,
         height: 630,
-        alt: "VelocityAI - Ai Solutions for Modern Businesses to Grow",
+        alt: "Velocity AI - AI That Accelerates Modern Business",
       },
     ],
     locale: "en_US",
@@ -49,8 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VelocityAI | Ai Solutions for Modern Businesses to Grow",
-    description: "Ai Solutions for Modern Businesses to Grow. Professional AI-powered websites and intelligent automation for Sacramento businesses.",
+    title: "Velocity AI | AI That Accelerates Modern Business",
+    description: "Practical AI solutions that deliver real results for modern businesses.",
     images: ["/images/hero.jpg"],
   },
   icons: {
@@ -59,32 +60,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-};
-
-// JSON-LD structured data for LocalBusiness + Services (great for SEO)
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "VelocityAI",
-  description: "Ai Solutions for Modern Businesses to Grow. AI-powered website development and intelligent automation services for businesses in Sacramento, California.",
-  url: siteUrl,
-  telephone: "(916) 555-0192",
-  email: "hello@runvelocityai.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Sacramento",
-    addressRegion: "CA",
-    addressCountry: "US",
-  },
-  areaServed: ["Sacramento", "Roseville", "Folsom", "Elk Grove", "Davis", "Central Valley"],
-  serviceType: [
-    "AI Website Development",
-    "Intelligent Business Automation",
-    "AI Chatbots and Agents",
-    "Custom AI Integrations",
-    "Digital Transformation Consulting",
-  ],
-  sameAs: [],
 };
 
 export default function RootLayout({
@@ -100,10 +75,6 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white text-slate-900">
         {children}
         <Toaster position="top-center" richColors closeButton />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
       </body>
     </html>
   );

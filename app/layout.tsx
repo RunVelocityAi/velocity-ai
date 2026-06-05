@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
   weight: ["400", "500", "600"],
 });
 
-const siteUrl = "https://velocity-ai-seven.vercel.app"; // Update this when you get a custom domain
+const siteUrl = "https://velocity-ai-seven.vercel.app";
 
 export const metadata: Metadata = {
   title: "Velocity AI | AI That Accelerates Modern Business",

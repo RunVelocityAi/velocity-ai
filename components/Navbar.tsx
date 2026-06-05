@@ -1,8 +1,8 @@
 "use client";
-
 import { useState } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#services", label: "Services" },
@@ -29,20 +29,17 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Logo - Modern tech focused */}
-        <a href="#top" className="flex items-center gap-4 group" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-          <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-950 ring-1 ring-inset ring-slate-800 transition-all duration-200 group-hover:ring-[#6366f1]/60 group-hover:scale-[1.02]">
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#6366f1] to-[#a855f7] opacity-[0.08] group-hover:opacity-[0.15] transition-opacity" />
-            <span className="relative font-mono text-[28px] font-semibold tracking-[-2.5px] bg-gradient-to-br from-white via-slate-100 to-white bg-clip-text text-transparent drop-shadow-sm">V</span>
-            {/* Subtle tech accent dot */}
-            <div className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-[#6366f1] opacity-50 blur-[1px]" />
-          </div>
-          <div className="flex flex-col -space-y-px">
-            <div className="font-semibold text-[21px] tracking-[-1.6px] text-slate-900 transition-colors group-hover:text-[#4f46e5]">
-              VelocityAI
-            </div>
-            <div className="text-[9px] font-medium tracking-[2.5px] text-slate-500">SACRAMENTO</div>
-          </div>
+        
+        {/* New Tech Logo */}
+        <a href="#top" className="flex items-center gap-3 group" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+          <Image
+            src="/velocity-ai-logo.png"
+            alt="Velocity AI"
+            width={200}
+            height={60}
+            className="h-12 w-auto transition-transform group-hover:scale-[1.02]"
+            priority
+          />
         </a>
 
         {/* Desktop Navigation */}

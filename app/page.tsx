@@ -1,16 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { 
-  ArrowRight, Check, Star, Users, Zap, MapPin, Phone, Mail, 
-  Globe, Bot, TrendingUp 
+import {
+  ArrowRight, Check, Star, Users, Zap, MapPin, Phone, Mail,
+  Globe, Bot, TrendingUp
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import ContactForm from "@/components/ContactForm";
 
-// Portfolio projects (realistic modern business examples)
+// Portfolio projects
 const portfolio = [
   {
     id: 1,
@@ -103,7 +103,7 @@ export default function VelocityAI() {
     <div id="top" className="min-h-screen">
       <Navbar />
 
-            {/* HERO */}
+      {/* HERO */}
       <section className="relative pt-12 pb-20 md:pt-16 md:pb-28 bg-slate-950 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#334155_0.8px,transparent_1px)] bg-[length:5px_5px] opacity-40" />
        
@@ -159,6 +159,7 @@ export default function VelocityAI() {
           </div>
         </div>
       </section>
+
       {/* TRUST / STATS BAR */}
       <div className="border-b border-slate-200 bg-white py-5">
         <div className="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-sm">
@@ -186,7 +187,6 @@ export default function VelocityAI() {
             We focus on two things that move the needle for modern businesses: exceptional websites and automation that actually removes work.
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
@@ -222,17 +222,16 @@ export default function VelocityAI() {
               Start your project <ArrowRight className="w-4 h-4" />
             </a>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {portfolio.map((project) => (
-              <div 
-                key={project.id} 
+              <div
+                key={project.id}
                 className="group bg-white rounded-3xl overflow-hidden border border-slate-200 cursor-pointer flex flex-col"
                 onClick={() => setSelectedProject(project)}
               >
                 <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
-                  <Image 
-                    src={project.image} 
+                  <Image
+                    src={project.image}
                     alt={`${project.client} — ${project.title}`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -260,7 +259,6 @@ export default function VelocityAI() {
               </div>
             ))}
           </div>
-
           <p className="text-center text-sm text-slate-500 mt-8">All projects delivered for modern businesses. Click any card for full details.</p>
         </div>
       </section>
@@ -269,22 +267,19 @@ export default function VelocityAI() {
       <section id="about" className="max-w-5xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-12 gap-x-10 gap-y-10 items-center">
           <div className="md:col-span-7">
-            <div className="uppercase text-xs font-semibold tracking-[2px] text-[#4f46e5]">WHO WE ARE</div>            
+            <div className="uppercase text-xs font-semibold tracking-[2px] text-[#4f46e5]">WHO WE ARE</div>
             <h2 className="mt-3 text-5xl tracking-[-2.6px] font-semibold leading-none">AI Builders Obsessed with Results.<br />Driven by Velocity</h2>
-                      
-            
+           
             <div className="prose prose-slate mt-7 max-w-2xl text-[15.5px] text-slate-600">
               <p>We’re based in Sacramento because we believe modern businesses deserve world-class technology without the hype or the San Francisco markup.</p>
               <p>Every project starts with listening. We map your actual workflows, identify the highest-leverage AI opportunities, and ship production-grade work fast — usually in weeks, not months.</p>
             </div>
-
             <div className="mt-8 flex flex-wrap gap-3">
               {["Practical first", "Local support", "Transparent pricing", "Built to last"].map((t, i) => (
                 <div key={i} className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm font-medium">{t}</div>
               ))}
             </div>
           </div>
-
           <div className="md:col-span-5 bg-slate-900 text-white rounded-3xl p-9">
             <div className="flex items-center gap-3 text-[#14b8a6] mb-4">
               <Zap className="w-5 h-5" />
@@ -306,7 +301,7 @@ export default function VelocityAI() {
         </div>
       </section>
 
-      {/* TESTIMONIALS (short social proof) */}
+      {/* TESTIMONIALS */}
       <div className="border-y border-slate-200 bg-white py-10">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 text-sm">
@@ -337,9 +332,7 @@ export default function VelocityAI() {
           <h2 className="mt-3 text-5xl tracking-[-2.4px] font-semibold">Tell us about your business.<br />We’ll show you what’s possible.</h2>
           <p className="mt-4 text-lg text-slate-600 max-w-md mx-auto">Free 20-minute strategy calls. No hard sell — just clear recommendations tailored to your business.</p>
         </div>
-
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Contact info */}
           <div className="lg:col-span-2 space-y-8">
             <div>
               <div className="text-sm font-medium text-slate-500 mb-2">EMAIL</div>
@@ -360,13 +353,10 @@ export default function VelocityAI() {
               </div>
               <p className="text-slate-600 mt-1 text-[15px]">Serving the greater Sacramento region and Central Valley</p>
             </div>
-
             <div className="pt-4 border-t border-slate-200 text-sm text-slate-600">
               Prefer to email directly? Reach us at <span className="font-medium text-slate-800">hello@runvelocityai.com</span>. We read every message.
             </div>
           </div>
-
-          {/* The Form */}
           <div className="lg:col-span-3">
             <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-sm">
               <ContactForm />
@@ -401,46 +391,42 @@ export default function VelocityAI() {
 
       {/* Portfolio Modal */}
       {selectedProject && (
-        <div 
+        <div
           className="fixed inset-0 z-[70] flex items-center justify-center bg-black/70 p-4 md:p-6"
           onClick={() => setSelectedProject(null)}
         >
-          <div 
+          <div
             className="bg-white rounded-3xl max-w-4xl w-full max-h-[92vh] overflow-auto shadow-2xl"
             onClick={e => e.stopPropagation()}
           >
             <div className="relative">
-              <button 
-                onClick={() => setSelectedProject(null)} 
+              <button
+                onClick={() => setSelectedProject(null)}
                 className="absolute top-5 right-5 z-10 bg-white/90 hover:bg-white text-slate-900 rounded-full p-2.5 shadow"
                 aria-label="Close"
               >
                 ✕
               </button>
-              <div className="relative h-[280px] md:h-[360px] bg-slate-100">
-                <Image 
-                  src={selectedProject.image} 
-                  alt={selectedProject.client} 
-                  fill 
+                            <div className="relative h-[280px] md:h-[360px] bg-slate-100">
+                <Image
+                  src={selectedProject.image}
+                  alt={selectedProject.client}
+                  fill
                   sizes="(max-width: 768px) 100vw, 800px"
-                  className="object-cover" 
+                  className="object-cover"
                 />
               </div>
             </div>
-
             <div className="p-8 md:p-11">
               <div className="uppercase tracking-widest text-xs font-medium text-[#4f46e5]">{selectedProject.category} • SACRAMENTO</div>
               <h3 className="text-4xl font-semibold tracking-[-1.6px] mt-2 mb-1">{selectedProject.client}</h3>
               <p className="text-xl text-slate-600">{selectedProject.title}</p>
-
               <div className="mt-6 inline-block bg-emerald-100 text-emerald-700 text-sm font-semibold px-4 py-1 rounded-full">
                 {selectedProject.result}
               </div>
-
               <div className="prose prose-slate mt-7 max-w-none">
                 <p className="text-[15.5px]">{selectedProject.details}</p>
               </div>
-
               <div className="mt-8">
                 <div className="text-sm font-semibold tracking-wider text-slate-500 mb-3">KEY OUTCOMES</div>
                 <ul className="grid sm:grid-cols-3 gap-3">
@@ -451,9 +437,8 @@ export default function VelocityAI() {
                   ))}
                 </ul>
               </div>
-
               <div className="mt-10 flex flex-col sm:flex-row gap-3">
-                <button 
+                <button
                   onClick={() => {
                     setSelectedProject(null);
                     setTimeout(() => {
@@ -464,8 +449,8 @@ export default function VelocityAI() {
                 >
                   Start a similar project <ArrowRight className="w-4 h-4" />
                 </button>
-                <button 
-                  onClick={() => setSelectedProject(null)} 
+                <button
+                  onClick={() => setSelectedProject(null)}
                   className="btn-secondary flex-1 py-3.5 rounded-2xl font-semibold text-base"
                 >
                   Close

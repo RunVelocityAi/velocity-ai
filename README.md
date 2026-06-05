@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VelocityAI — Sacramento
 
-## Getting Started
+Modern one-page professional website for **VelocityAI** — Empowering Modern Businesses to Lead with AI. An AI services company based in Sacramento, California.
 
-First, run the development server:
+**Live site:** https://runvelocityai.com
+**Contact:** hello@runvelocityai.com | (916) 555-0192
+
+Built with **Next.js 16 + Tailwind CSS**, fully responsive, fast, and SEO-optimized. Includes a working contact form that sends real emails.
+
+## Features
+
+- Hero with strong call-to-action and custom hero image (Grok Imagine)
+- Services section (AI Websites, Intelligent Automation, Strategy & Integration)
+- Portfolio with 4 detailed Sacramento case studies + modal lightbox
+- About section with local focus and values
+- Fully functional contact form with validation (Zod + React Hook Form)
+- Real email sending via Resend (with graceful dev-mode fallback)
+- Excellent SEO: metadata, Open Graph, Twitter cards, JSON-LD LocalBusiness + services
+- Mobile-first responsive design with smooth mobile menu
+- Subtle, professional animations (Framer Motion)
+- Fast performance (Next.js Image, minimal deps, clean Tailwind)
+
+## Quick Start (Run Locally)
 
 ```bash
+# 1. Install dependencies (already done if you just cloned)
+npm install
+
+# 2. (Recommended) Set up email sending for the contact form
+cp .env.example .env.local
+# Then edit .env.local with your Resend key + hello@runvelocityai.com
+# (see "Email / Contact Form Setup" section below for full instructions including Resend domain verification)
+
+# 3. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Email / Contact Form Setup (Important)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The contact form is production-ready and now configured for your real domain.
 
-## Learn More
+1. In Google Workspace, make sure `hello@runvelocityai.com` is created.
+2. Sign up for a free account at [resend.com](https://resend.com)
+3. Copy `.env.example` → `.env.local`
+4. Add your values:
+   ```
+   RESEND_API_KEY=re_xxxxxxxxxxxxxxxx
+   CONTACT_EMAIL=hello@runvelocityai.com
+   ```
+5. **Critical**: In the Resend dashboard, add and verify the domain `runvelocityai.com`. Follow the DNS instructions (add the records at your domain registrar). This allows sending from `hello@runvelocityai.com` with a professional "From" name.
 
-To learn more about Next.js, take a look at the following resources:
+**Dev mode fallback**: If `RESEND_API_KEY` is missing, submissions are logged to the terminal instead of sending. Perfect for development.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Once verified in Resend, test the contact form on the site — it will send a nicely formatted email to your Google Workspace inbox.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+app/
+  layout.tsx          # SEO, fonts, Toaster, JSON-LD
+  page.tsx            # The entire one-page site
+  api/contact/route.ts # Server action that sends email via Resend
+components/
+  Navbar.tsx
+  ContactForm.tsx
+public/images/        # Custom Grok Imagine hero + portfolio visuals
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Business name / contact info**: Edit in `app/page.tsx`, `layout.tsx`, and the API route.
+- **Colors**: Update CSS variables in `app/globals.css` (primary indigo + teal accent).
+- **Portfolio**: Replace images in `public/images/` and update the `portfolio` array in `app/page.tsx`.
+- **Domain / OG image**: Update `siteUrl` and metadata in `app/layout.tsx`.
+
+## Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+## Tech Stack
+
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS 4
+- Framer Motion (light animations)
+- React Hook Form + Zod (validation)
+- Resend (transactional email)
+- Sonner (toasts)
+- Lucide icons
+- Next.js Image (optimized custom visuals)
+
+## Deployment
+
+Deploy anywhere Next.js is supported (Vercel is easiest).
+
+Remember to add your `RESEND_API_KEY` and `CONTACT_EMAIL` environment variables in your hosting dashboard.
+
+---
+
+Built for modern businesses that want practical AI, not hype.

@@ -19,35 +19,17 @@ const siteUrl = "https://velocity-ai-seven.vercel.app";
 
 export const metadata: Metadata = {
   title: "Velocity AI | AI That Accelerates Modern Business",
-  description: "Practical AI solutions that deliver real results. We build high-performing websites, intelligent automation, and AI strategies for modern businesses in Sacramento and beyond.",
+  description: "Practical AI solutions that deliver real results. We build high-performing websites, intelligent automation, and AI strategies for modern businesses in Nevada County and beyond.",
   keywords: [
-    "AI services Sacramento",
-    "AI website development Sacramento",
+    "AI services Nevada County",
+    "AI website development Grass Valley",
     "business automation Sacramento",
     "custom AI solutions California",
-    "Sacramento AI consulting",
-    "intelligent automation",
-    "Next.js websites",
-    "AI chatbots for business",
-    "AI strategy",
+    "Nevada City AI consulting",
   ],
   authors: [{ name: "VelocityAI" }],
   creator: "VelocityAI",
   metadataBase: new URL(siteUrl),
-  openGraph: {
-    title: "Velocity AI | AI That Accelerates Modern Business",
-    description: "Practical AI websites, automation, and strategy that deliver real results — fast.",
-    images: [{ url: "/images/hero.jpg", width: 1200, height: 630 }],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Velocity AI | AI That Accelerates Modern Business",
-    description: "Practical AI solutions that deliver real results for modern businesses.",
-    images: ["/images/hero.jpg"],
-  },
-  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({
@@ -80,7 +62,7 @@ export default function RootLayout({
                         </div>
                         <button onclick="toggleVelocityChat()" style="background:none; border:none; color:#aaa; font-size:1.6rem; cursor:pointer;">−</button>
                       </div>
-                      <div id="chat-messages" style="height:320px; overflow-y:auto; padding:20px; background:#1e2a44;"></div>
+                      <div id="chat-messages" style="height:320px; overflow-y:auto; padding:20px; background:#1f2a44; color:#e0f0ff;"></div>
                       <div style="padding:15px; background:#0a1625; display:flex; gap:10px;">
                         <input type="text" id="chat-input" placeholder="Type your message..." style="flex:1; padding:12px; border:none; border-radius:30px; background:#334455; color:white;" onkeypress="if(event.key==='Enter') sendVelocityMessage()">
                         <button onclick="sendVelocityMessage()" style="background:#00d4ff; color:#000; border:none; padding:12px 20px; border-radius:30px;">Send</button>

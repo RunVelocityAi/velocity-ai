@@ -70,4 +70,50 @@ export default function RootLayout({
               window.toggleVelocityChat = function() {
                 const min = document.getElementById('chat-minimized');
                 const full = document.getElementById('chat-full');
-                if (full.style.display === '
+                if (full.style.display === 'none') {
+                  min.style.display = 'none';
+                  full.style.display = 'block';
+                  const messages = document.getElementById('chat-messages');
+                  if (messages.children.length === 0) {
+                    messages.innerHTML = '<div style="margin:12px 0;"><span style="background:#1e2a44; padding:10px 16px; border-radius:20px;">Hi! I\\'m your 24/7 Personal AI Assistant. How can I help you today?</span></div>';
+                  }
+                } else {
+                  min.style.display = 'flex';
+                  full.style.display = 'none';
+                }
+              };
+
+              window.sendVelocityMessage = function() {
+                const input = document.getElementById('chat-input');
+                const messages = document.getElementById('chat-messages');
+                const text = input.value.trim();
+                if (!text) return;
+
+                messages.innerHTML += \`<div style="text-align:right; margin:12px 0;"><span style="background:#00d4ff; color:#000; padding:10px 16px; border-radius:20px;">\${text}</span></div>\`;
+                messages.scrollTop = messages.scrollHeight;
+                input.value = '';
+
+                setTimeout(() => {
+                  let reply = "Hi! How can I help you with Velocity AI today?";
+                  
+                  if (text.toLowerCase().includes("build a site") || text.toLowerCase().includes("help me build") || text.toLowerCase().includes("website")) {
+                    reply = "Absolutely! I'd love to build you a modern AI-powered website. Would you like me to create a custom mockup for your business?";
+                  } else if (text.toLowerCase().includes("hire you") || text.toLowerCase().includes("work with you") || text.toLowerCase().includes("get started") || text.toLowerCase().includes("contact")) {
+                    reply = "Wonderful! We'd be happy to work with you. Call or text Gabe directly at 818-693-5424 to get started.";
+                  } else if (text.toLowerCase().includes("pricing") || text.toLowerCase().includes("cost") || text.toLowerCase().includes("how much")) {
+                    reply = "Our website packages start at $1,800. Happy to show you the full pricing.";
+                  } else if (text.toLowerCase().includes("how long") || text.toLowerCase().includes("time")) {
+                    reply = "Most custom sites are completed and live within 7-14 days.";
+                  }
+                  
+                  messages.innerHTML += \`<div style="margin:12px 0;"><span style="background:#1e2a44; padding:10px 16px; border-radius:20px;">\${reply}</span></div>\`;
+                  messages.scrollTop = messages.scrollHeight;
+                }, 700);
+              };
+            `,
+          }}
+        />
+      </body>
+    </html>
+  );
+}

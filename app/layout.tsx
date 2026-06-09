@@ -33,7 +33,7 @@ export default function RootLayout({
         {children}
         <Toaster position="top-center" richColors closeButton />
 
-        {/* Velocity AI 24/7 Chatbot - Top Right */}
+        {/* Velocity AI 24/7 Chatbot - Top Right - Improved Readability */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -52,7 +52,7 @@ export default function RootLayout({
                         </div>
                         <button onclick="toggleVelocityChat()" style="background:none; border:none; color:#aaa; font-size:1.6rem; cursor:pointer;">−</button>
                       </div>
-                      <div id="chat-messages" style="height:320px; overflow-y:auto; padding:20px; background:#1f2a44; color:#e0f0ff;"></div>
+                      <div id="chat-messages" style="height:340px; overflow-y:auto; padding:20px; background:#1f2a44; color:#e0f0ff; line-height:1.5;"></div>
                       <div style="padding:15px; background:#0a1625; display:flex; gap:10px;">
                         <input type="text" id="chat-input" placeholder="Type your message..." style="flex:1; padding:12px; border:none; border-radius:30px; background:#334455; color:white;" onkeypress="if(event.key==='Enter') sendVelocityMessage()">
                         <button onclick="sendVelocityMessage()" style="background:#00d4ff; color:#000; border:none; padding:12px 20px; border-radius:30px;">Send</button>
@@ -75,7 +75,7 @@ export default function RootLayout({
                   full.style.display = 'block';
                   const messages = document.getElementById('chat-messages');
                   if (messages.children.length === 0) {
-                    messages.innerHTML = '<div style="margin:12px 0;"><span style="background:#1e2a44; padding:10px 16px; border-radius:20px;">Hi! I\\'m your 24/7 Personal AI Assistant. How can I help you today?</span></div>';
+                    messages.innerHTML = '<div style="margin:12px 0;"><span style="background:#2a3a55; padding:12px 16px; border-radius:20px; display:block;">Hi! I\\'m your 24/7 Personal AI Assistant. How can I help you today?</span></div>';
                   }
                 } else {
                   min.style.display = 'flex';
@@ -89,7 +89,7 @@ export default function RootLayout({
                 const text = input.value.trim();
                 if (!text) return;
 
-                messages.innerHTML += \`<div style="text-align:right; margin:12px 0;"><span style="background:#00d4ff; color:#000; padding:10px 16px; border-radius:20px;">\${text}</span></div>\`;
+                messages.innerHTML += \`<div style="text-align:right; margin:12px 0;"><span style="background:#00d4ff; color:#000; padding:12px 16px; border-radius:20px; display:block;">\${text}</span></div>\`;
                 messages.scrollTop = messages.scrollHeight;
                 input.value = '';
 
@@ -106,7 +106,7 @@ export default function RootLayout({
                     reply = "Most custom sites are completed and live within 7-14 days.";
                   }
                   
-                  messages.innerHTML += \`<div style="margin:12px 0;"><span style="background:#1e2a44; padding:10px 16px; border-radius:20px;">\${reply}</span></div>\`;
+                  messages.innerHTML += \`<div style="margin:12px 0;"><span style="background:#2a3a55; padding:12px 16px; border-radius:20px; display:block;">\${reply}</span></div>\`;
                   messages.scrollTop = messages.scrollHeight;
                 }, 700);
               };
